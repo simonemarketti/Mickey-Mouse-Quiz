@@ -24,10 +24,9 @@ form.addEventListener('submit', e => {
     }
   });
 
-  //  animation
-  //  create a counter
+  // animation - create a counter and setInterval
   let counter = 0;
-  //  create animation
+
   const timer = setInterval(() => {
     result.querySelector('.percentage').textContent = `${counter}%`;
     if (counter === score) {
