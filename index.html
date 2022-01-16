@@ -15,27 +15,28 @@
   <!-- top section -->
   <div class="intro py-3 bg-white text-center">
     <div class="container">
-      <h1 class="text-dark display-3 my-4">How much are you Mickey Mouse?</h1>
+      <h1 class="text-dark display-3 my-4">How Mickey are you?</h1>
     </div>
   </div>
 
   <!-- result section -->
   <div class="result py-4 d-none bg-light text-center">
     <div class="container lead">
-      <p>You are <span class="percentage text-warning display-4 p-3">0%</span> Mickey</p>
-    </div>
-    <div class="container">
+      <p>With</p>
       <img width="50" src="/assets/ears.png" alt="" class="stuff d-none">
       <img width="50" src="/assets/gloves.png" alt="" class="stuff d-none">
       <img width="50" src="/assets/goofy.png" alt="" class="stuff d-none">
       <img width="50" src="/assets/minnie.png" alt="" class="stuff d-none">
+    </div>
+    <div class="container lead">
+      <p>You are <span class="percentage text-warning display-4 p-3">0%</span> Mickey</p>
     </div>
   </div>
 
   <!-- quiz section -->
   <div class="quiz py-4 bg-secondary">
     <div class="container">
-      <h2 class="my-5 text-white">Test</h2>
+      <h2 class="my-5 text-white">Quiz</h2>
       <form class="quiz-form text-light">
         <div class="my-5">
           <p class="lead">1. Do you have two big black ears?</p>
@@ -82,7 +83,8 @@
           </div>
         </div>
         <div class="text-center">
-          <input type="submit" class="btn btn-light" value="Send">
+          <input type="submit" class="btn btn-light mx-3" value="Send">
+          <input type="reset" class="btn btn-light mx-3" value="Retry" onClick="document.location.reload()">
         </div>
       </form>
     </div>
