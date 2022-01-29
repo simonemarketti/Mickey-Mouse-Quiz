@@ -19,7 +19,7 @@ Based on the answers given, you get a certain level of Mickey (from 0 to 100%).
 
 ### Links
 
-https://simonemarketti.github.io/Mickey-Mouse-Quiz
+https://simonemarketti.github.io/mickey-mouse-quiz
 
 ### Notes
 
