@@ -1,4 +1,4 @@
-# Mickey-Mouse-Quiz
+# Mickey Mouse Quiz
 
 ## Overview
 
