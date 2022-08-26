@@ -5,61 +5,66 @@ const result = document.querySelector('.result');
 const percentage = document.querySelector('.percentage')
 const images = document.querySelectorAll('.stuff');
 const errors = document.querySelectorAll('.error')
-const totalAnswers = document.querySelector('.total-answers');
-
+const totalCorrectAnswers = document.querySelector('.total-answers');
 
 //  correct answers
 const correctAnswers = ['A', 'B', 'B', 'A'];
 
 //  submit logic
 form.addEventListener('submit', e => {
-  e.preventDefault();
+    e.preventDefault();
+    //  save the user's answers
+    const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
 
-  //  save the user's answers
-  const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
+    //  create the score
+    let score = 0;
+    let scoreAnswers = 0;
 
-  //  create the score
-  let score = 0;
-  let scoreAnswers = 0;
+    //  check the answers
+    userAnswers.forEach((answer, index) => {
+        if (answer === correctAnswers[index]) {
+            score += 25;
+            scoreAnswers += 1;
+            images[index].classList.remove('d-none')
+            errors[index].classList.add('d-none')
+        }
+    });
 
-  //  check the answers
-  userAnswers.forEach((answer, index) => {
-    if (answer === correctAnswers[index]) {
-      score += 25;
-      scoreAnswers += 1;
-      images[index].classList.remove('d-none')
-      errors[index].classList.add('d-none')
-    }
-  });
+    //  render number of correct answers
+    totalCorrectAnswers.textContent = scoreAnswers;
 
-  //  refresh number answers
-  totalAnswers.textContent = scoreAnswers;
+    // animation - create a random number and set repetitions
+    let randomNumber = 0;
+    let timerRepetitionsCount = 20;
 
-  // animation - create a random counter animation and set ripetition 
-  let randomNumber = 0;
-  let timerRepetitions = 20;
+    // create animation
+    const timer = setInterval(() => {
+        // render random number
+        percentage.textContent = `${randomNumber}%`;
 
-  const timer = setInterval(() => {
-    percentage.textContent = `${randomNumber}%`;
-    if (timerRepetitions === 0) {
-      //  conditional formatting result
-      if (score < 25) {
-        percentage.classList.remove('text-warning');
-        percentage.classList.add('text-danger');
-      } else if (score > 75) {
-        percentage.classList.remove('text-warning');
-        percentage.classList.add('text-success');
-      }
-      percentage.textContent = `${score}%`;
-      clearInterval(timer);
-    } else {
-      randomNumber = Math.floor(Math.random() * 100);
-      timerRepetitions--;
-    }
-  }, 70);
+        // animation run when counter > 0
+        if (timerRepetitionsCount > 0) {
+            randomNumber = Math.floor(Math.random() * 100);
+            timerRepetitionsCount--;
+        } else {
+            // stop animation (counter === 0)
+            clearInterval(timer);
 
-  // show the result
-  scrollTo(0, 0);
-  result.classList.remove('d-none');
-  quiz.classList.add('d-none');
+            // conditional formatting result
+            if (score < 25) {
+                percentage.classList.remove('text-warning');
+                percentage.classList.add('text-danger');
+            } else if (score > 75) {
+                percentage.classList.remove('text-warning');
+                percentage.classList.add('text-success');
+            }
+
+            // render result
+            percentage.textContent = `${score}%`;
+        }
+    }, 70);
+
+    // show result page
+    result.classList.remove('d-none');
+    quiz.classList.add('d-none');
 });

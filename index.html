@@ -2,100 +2,100 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mickey Mouse Quiz</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mickey Mouse Quiz</title>
+    <link href="/favicon.png" rel="icon" type="image/png">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
 </head>
 
 <body>
-  <!-- top section -->
-  <div class="intro py-3 bg-white text-center">
+<!-- top section -->
+<div class="intro py-3 bg-white text-center">
     <div class="container">
-      <h1 class="text-dark display-3 my-3">How Mickey are you?</h1>
+        <h1 class="text-dark display-3 my-3">How Mickey are you?</h1>
     </div>
-  </div>
+</div>
 
-  <!-- result section -->
-  <div class="result py-4 d-none bg-light text-center">
+<!-- result section -->
+<div class="result py-4 d-none bg-light text-center">
     <div class="container lead">
-      <p>With <span class="total-answers fw-bold">0</span> correct answers</p>
-      <img width="50" src="./assets/ears.png" alt="mickey-ears" class="stuff d-none">
-      <img width="50" src="./assets/error.png" alt="error" class="error">
-      <img width="50" src="./assets/gloves.png" alt="mickey-gloves" class="stuff d-none">
-      <img width="50" src="./assets/error.png" alt="error" class="error">
-      <img width="50" src="./assets/goofy.png" alt="goofy" class="stuff d-none">
-      <img width="50" src="./assets/error.png" alt="error" class="error">
-      <img width="50" src="./assets/minnie.png" alt="minnie" class="stuff d-none">
-      <img width="50" src="./assets/error.png" alt="error" class="error">
+        <p>With <span class="total-answers fw-bold">0</span> correct answers</p>
+        <img alt="mickey-ears" class="stuff d-none" src="./assets/ears.png" width="50">
+        <img alt="error" class="error" src="./assets/error.png" width="50">
+        <img alt="mickey-gloves" class="stuff d-none" src="./assets/gloves.png" width="50">
+        <img alt="error" class="error" src="./assets/error.png" width="50">
+        <img alt="goofy" class="stuff d-none" src="./assets/goofy.png" width="50">
+        <img alt="error" class="error" src="./assets/error.png" width="50">
+        <img alt="minnie" class="stuff d-none" src="./assets/minnie.png" width="50">
+        <img alt="error" class="error" src="./assets/error.png" width="50">
     </div>
     <div class="container lead my-4">
-      <p>You are <span class="percentage text-warning display-4 p-3">0%</span> Mickey</p>
-      <input type="reset" class="btn btn-secondary my-5" value="Try Again" onClick="document.location.reload()">
+        <p>You are <span class="percentage text-warning display-4 p-3">0%</span> Mickey</p>
+        <input class="btn btn-secondary my-5" onClick="document.location.reload()" type="reset" value="Try Again">
     </div>
-  </div>
+</div>
 
-  <!-- quiz section -->
-  <div class="quiz py-4 bg-secondary">
+<!-- quiz section -->
+<div class="quiz py-4 bg-secondary">
     <div class="container">
-      <h2 class="my-5 text-white">Quiz</h2>
-      <form class="quiz-form text-light">
-        <div class="my-5">
-          <p class="lead">1. Do you have two big black ears?</p>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q1" value="A" checked>
-            <label class="form-check-label">Yes and I like them</label>
-          </div>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q1" value="B">
-            <label class="form-check-label">No, I have small ears</label>
-          </div>
-        </div>
-        <div class="my-5">
-          <p class="lead">2. What do you like to wear?</p>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q2" value="A" checked>
-            <label class="form-check-label">I like blue jeans</label>
-          </div>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q2" value="B">
-            <label class="form-check-label">I like red pants and gloves</label>
-          </div>
-        </div>
-        <div class="my-5">
-          <p class="lead">3. Who is your best friend?</p>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q3" value="A" checked>
-            <label class="form-check-label">A fat cat</label>
-          </div>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q3" value="B">
-            <label class="form-check-label">A dog with big teeth</label>
-          </div>
-        </div>
-        <div class="my-5">
-          <p class="lead">4. Do you have a girlfriend?</p>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q4" value="A" checked>
-            <label class="form-check-label">Yes, a cute girl with a headband</label>
-          </div>
-          <div class="form-check my-2 text-white-75">
-            <input type="radio" name="q4" value="B">
-            <label class="form-check-label">No, I'm single</label>
-          </div>
-        </div>
-        <div class="text-center">
-          <input type="submit" class="btn btn-light" value="Send">
-        </div>
-      </form>
+        <h2 class="my-5 text-white">Quiz</h2>
+        <form class="quiz-form text-light">
+            <div class="my-5">
+                <p class="lead">1. Do you have two big black ears?</p>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q1a">Yes and I like them</label>
+                    <input checked id="q1a" name="q1" type="radio" value="A">
+                </div>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q1b">No, I have small ears</label>
+                    <input id="q1b" name="q1" type="radio" value="B">
+                </div>
+            </div>
+            <div class="my-5">
+                <p class="lead">2. What do you like to wear?</p>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q2a">I like blue jeans</label>
+                    <input checked id="q2a" name="q2" type="radio" value="A">
+                </div>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q2b">I like red pants and gloves</label>
+                    <input id="q2b" name="q2" type="radio" value="B">
+                </div>
+            </div>
+            <div class="my-5">
+                <p class="lead">3. Who is your best friend?</p>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q3a">A fat cat</label>
+                    <input checked id="q3a" name="q3" type="radio" value="A">
+                </div>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q3b">A dog with big teeth</label>
+                    <input id="q3b" name="q3" type="radio" value="B">
+                </div>
+            </div>
+            <div class="my-5">
+                <p class="lead">4. Do you have a girlfriend?</p>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q4a">Yes, a cute girl with a headband</label>
+                    <input checked id="q4a" name="q4" type="radio" value="A">
+                </div>
+                <div class="form-check my-2 text-white-75">
+                    <label class="form-check-label" for="q4b">No, I'm single</label>
+                    <input id="q4b" name="q4" type="radio" value="B">
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-light" type="submit">Send</button>
+            </div>
+        </form>
     </div>
-  </div>
+</div>
 
-  <!-- script -->
-  <script src="app.js"></script>
+<!-- script -->
+<script src="app.js"></script>
 </body>
 
 </html>
